@@ -1,0 +1,25 @@
+// import abstract
+@import 'abstract/functions';
+@import 'abstract/mixins';
+@import 'abstract/variables';
+
+// import base
+@import 'base/base';
+@import 'base/anim';
+@import 'base/typography';
+@import 'base/utilities'; 
+
+// import pages
+@import 'pages/home';
+
+// import button
+@import 'components/button';
+
+// header styling
+@import 'layout/header';
+
+// typography 
+@import 'base/typography';
+
+// grid styling
+@import 'layout/grid';
