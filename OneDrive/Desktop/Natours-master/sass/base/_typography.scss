@@ -1,0 +1,47 @@
+/* resetting the page */
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    /* font-size: 16px; */
+    line-height: 1.7;
+    color: $grey;
+    padding: 3rem;
+}
+
+// styling the heading for the about section
+.heading-secondary{
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    background-image: linear-gradient(to bottom left, $primary-green, $sec-green);
+    display: inline-block;
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: all .2s;
+    letter-spacing: .2rem;
+
+        &:hover{
+            transform: scale(1.1);
+            text-shadow: .5rem 1rem 2rem rgba($black, .2);
+        }
+}
+
+.heading-tertiary{
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.paragraph{
+    font-size: 1.6rem;
+        &:not(:last-child){
+            margin-bottom: 3rem;
+        }
+}
