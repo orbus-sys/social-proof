@@ -1,0 +1,196 @@
+
+html{
+    box-sizing: border-box;
+}
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background: url('../img/spalsh_screen.jpg') no-repeat center center fixed;
+    background-size: cover; 
+}
+
+/* container */
+#container{
+    width: 90vw;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 2fr 3fr 2fr;
+    grid-template-rows: 10vh 80vh 10vh;
+    justify-items: left;
+    align-items: center;
+}
+
+/* navigations */
+.nav-header{
+    grid-column: 3 / 4;
+    justify-self: center;
+    align-self: center;
+}
+ul li{
+    display: inline-block;
+    color: white;
+    font-size:20px;
+    font-weight: 700;
+    font-family: 'Odibee Sans', cursive;
+    letter-spacing: 5px;
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+/* main */
+.main{
+    align-self: center;
+    justify-self: center;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.title-header{
+    color: white;
+    font-family: 'Fredoka One', cursive;
+    font-size: 60px;
+}
+
+/* red circle */
+.red-circle{
+    height: 400px;
+    width: 400px;
+    background-color:#bc002d;
+    grid-column: 2 / 3;
+    position: relative;
+    grid-row: 2 / 3;
+    align-self: center;
+    justify-self: center;
+    border-radius: 50%;
+    z-index: -1;
+    opacity: .5;
+}
+
+/* links a */
+a{
+    text-decoration: none;
+    color: white;
+}
+nav > img{
+    visibility: hidden;
+}
+
+
+/* footer pictures */
+footer{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    align-self: center;
+    justify-self: center;
+    cursor: pointer;
+}
+
+.nav-pics{
+    border: rgba(255, 255, 255, 1) dotted 5px;
+    border-radius: 10px;
+    margin-right: 50px;
+    display: inline-block;
+    margin-bottom: 100px;
+    animation: pulse 2s infinite;
+}
+/* city names */
+
+.cities{
+    text-align: center;
+    margin: 0 auto;
+    font-size: 14px;
+    color: white;
+    font-family: 'MuseoModerno', cursive;
+}
+
+
+/* pulse animation for the nav pctures */
+@keyframes pulse{
+    0%{
+        transform: scale(0.9);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+    }
+    70%{
+        transform: scale(1);
+        box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
+    }
+    100%{
+        transform: scale(0.9);
+    }
+}
+/* @media */
+@media(max-width: 600px){
+    .red-circle{
+        width: 75px;
+        height: 75px;
+        grid-column: 1 / 1;
+        grid-row: 1 / 1;
+        z-index: -1;
+        align-self: center;
+        justify-self: center;
+    }
+    .main{
+        align-self: center;
+        justify-self: center;
+        grid-column: 1 / 1;
+        grid-row: 1 / 1;
+        justify-self: center;
+        align-items: center;
+
+    }
+    .title-header{
+        color: white;
+        font-family: 'Fredoka One', cursive;
+        font-size: 20px;
+    }
+    .nav-header{
+        top: 0;
+    }
+    ul li{
+        visibility: hidden;
+    }
+
+    nav > img{
+        visibility: visible;
+        margin-top: 20px;
+        margin-right: -50px;
+        cursor: pointer;
+    }
+
+    nav > img:hover{
+        width: 37px;
+        height: 37px;
+    }
+    footer{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 2;
+        align-self: center;
+        justify-content: center;
+    }
+    .nav-pics{
+        border-radius: 100px;
+        margin-right: 50px;
+        display: block;
+        margin-bottom: 10px;
+        margin-left: 10px;
+    }
+    img{
+        width: 65px;
+        height: 65px;
+    }
+    .cities{
+        text-align: center;
+        font-size: 12px;
+        color: white;
+        font-family: 'MuseoModerno', cursive;
+    }
+
+}

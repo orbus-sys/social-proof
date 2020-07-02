@@ -1,0 +1,20 @@
+{
+  "name": "japan",
+  "version": "1.0.0",
+  "description": "Tour site for Japan",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/styles.css -w"
+  },
+  "keywords": [
+    "japan",
+    "visit",
+    "nagasaki",
+    "visit"
+  ],
+  "author": "Marc Blanchard",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.14.1"
+  }
+}
